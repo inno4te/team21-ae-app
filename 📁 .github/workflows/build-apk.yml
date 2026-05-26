@@ -3,11 +3,14 @@ name: Build Team21 APK
 on:
   push:
     branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -28,7 +31,7 @@ jobs:
           path: |
             ~/.gradle/caches
             ~/.gradle/wrapper
-          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
           restore-keys: |
             ${{ runner.os }}-gradle-
 
@@ -42,7 +45,8 @@ jobs:
           path: app/build/outputs/apk/debug/app-debug.apk
           retention-days: 30
 
-      - name: Build Signed Release APK
+      # ── SIGNED RELEASE BUILD (only runs if secrets are set) ──────
+      - name: Build Release APK
         if: ${{ env.KEYSTORE_BASE64 != '' }}
         env:
           KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
@@ -68,12 +72,28 @@ jobs:
           path: app/build/outputs/apk/release/app-release.apk
           retention-days: 30
 
-      - name: Create GitHub Release on tag
+      # ── AUTO-CREATE GITHUB RELEASE on version tags ───────────────
+      - name: Create GitHub Release
         if: startsWith(github.ref, 'refs/tags/v')
         uses: softprops/action-gh-release@v2
         with:
           files: |
             app/build/outputs/apk/debug/app-debug.apk
+            app/build/outputs/apk/release/app-release.apk
           name: Team21 AE Platform ${{ github.ref_name }}
+          body: |
+            ## Team21 AE Consulting — Unified Excellence Platform
+            **Version:** ${{ github.ref_name }}
+            **© Innocent Forteh — Team21 Academy 2026**
+
+            ### What's included
+            - AE Consulting Module (8 assessment modules)
+            - 360° Evaluation Module (8 competency sections)
+            - LAT — Leadership Assessment Tool (6 domains)
+            - Full Admin Portal
+
+            ### Install
+            Download `app-release.apk` (signed) or `app-debug.apk` (unsigned/testing).
+            Enable "Install from unknown sources" on your Android device before installing.
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
