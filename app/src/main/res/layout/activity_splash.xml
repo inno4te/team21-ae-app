@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#0A1628"
+    android:padding="40dp">
+
+    <!-- Eagle / Logo placeholder — replaced by actual icon -->
+    <ImageView
+        android:id="@+id/splash_logo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@mipmap/ic_launcher"
+        android:contentDescription="Team21 Logo"
+        android:alpha="0"
+        android:layout_marginBottom="28dp" />
+
+    <!-- App Name -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Team21 AE Consulting"
+        android:textColor="#C9A84C"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
+        android:letterSpacing="0.05"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Tagline -->
+    <TextView
+        android:id="@+id/splash_tagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Integrated Excellence Platform"
+        android:textColor="#F0EAD6"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif"
+        android:textStyle="italic"
+        android:alpha="0"
+        android:layout_marginBottom="40dp" />
+
+    <!-- Divider -->
+    <View
+        android:layout_width="80dp"
+        android:layout_height="1dp"
+        android:background="#C9A84C"
+        android:layout_marginBottom="40dp" />
+
+    <!-- Isaiah 40:31 Verse -->
+    <TextView
+        android:id="@+id/splash_verse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&quot;Those who wait on the LORD shall renew\ntheir strength; they shall mount up\nwith wings as eagles.&quot;\n— Isaiah 40:31"
+        android:textColor="#8B6914"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif"
+        android:textStyle="italic"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.4"
+        android:alpha="0"
+        android:layout_marginBottom="40dp" />
+
+    <!-- Copyright -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="© Innocent Forteh  •  Team21 Academy  •  2026"
+        android:textColor="#6B7280"
+        android:textSize="11sp"
+        android:fontFamily="sans-serif" />
+
+</LinearLayout>

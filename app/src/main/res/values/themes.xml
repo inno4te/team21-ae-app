@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base Team21 Theme -->
+    <style name="Theme.Team21" parent="Theme.MaterialComponents.NoActionBar">
+        <!-- Status bar and navigation bar colours -->
+        <item name="android:statusBarColor">#0A1628</item>
+        <item name="android:navigationBarColor">#0A1628</item>
+        <item name="android:windowBackground">#0A1628</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar" tools:ignore="NewApi">false</item>
+        <item name="colorPrimary">#C9A84C</item>
+        <item name="colorPrimaryDark">#8B6914</item>
+        <item name="colorAccent">#C9A84C</item>
+        <!-- Smooth rendering -->
+        <item name="android:hardwareAccelerated">true</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimation</item>
+    </style>
+
+    <!-- Splash screen theme -->
+    <style name="Theme.Team21.Splash" parent="Theme.Team21">
+        <item name="android:windowBackground">#0A1628</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+    </style>
+
+    <!-- Window transition animations -->
+    <style name="WindowAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:activityOpenExitAnimation">@android:anim/fade_out</item>
+        <item name="android:activityCloseEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:activityCloseExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+</resources>

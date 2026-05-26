@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Team21 AE</string>
+    <string name="app_full_name">Team21 AE Consulting</string>
+    <string name="app_tagline">Integrated Excellence Platform</string>
+    <string name="app_verse">Those who wait on the LORD shall renew their strength. — Isaiah 40:31</string>
+    <string name="copyright">© Innocent Forteh · Team21 Academy · 2026</string>
+    <string name="loading">Loading platform…</string>
+    <string name="back_press_exit">Press back again to exit</string>
+    <string name="network_error">No internet connection. The platform works offline.</string>
+</resources>

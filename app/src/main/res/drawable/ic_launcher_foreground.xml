@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+  <!-- Gold ring -->
+  <path android:fillColor="#C9A84C"
+      android:pathData="M54,8 A46,46 0 1,1 53.9,8 Z
+                        M54,12 A42,42 0 1,0 54.1,12 Z"/>
+
+  <!-- Eagle body -->
+  <ellipse android:fillColor="#C9A84C"
+      android:cx="54" android:cy="62" android:rx="10" android:ry="14"/>
+
+  <!-- Eagle head -->
+  <circle android:fillColor="#C9A84C"
+      android:cx="54" android:cy="38" android:r="10"/>
+
+  <!-- Beak -->
+  <path android:fillColor="#112040"
+      android:pathData="M61,36 L68,40 L61,44 Z"/>
+
+  <!-- Eye -->
+  <circle android:fillColor="#112040"
+      android:cx="58" android:cy="35" android:r="2"/>
+
+  <!-- Left wing -->
+  <path android:fillColor="#C9A84C" android:fillAlpha="0.92"
+      android:pathData="M49,56 Q28,46 16,54 Q30,60 44,66 Z"/>
+
+  <!-- Right wing -->
+  <path android:fillColor="#C9A84C" android:fillAlpha="0.92"
+      android:pathData="M59,56 Q80,46 92,54 Q78,60 64,66 Z"/>
+
+  <!-- Tail feathers left -->
+  <path android:strokeColor="#C9A84C" android:strokeWidth="2"
+      android:strokeLineCap="round" android:fillColor="#00000000"
+      android:pathData="M46,76 L36,88 M50,76 L42,90 M54,76 L50,90"/>
+
+  <!-- Tail feathers right -->
+  <path android:strokeColor="#C9A84C" android:strokeWidth="2"
+      android:strokeLineCap="round" android:fillColor="#00000000"
+      android:pathData="M62,76 L72,88 M58,76 L66,90 M54,76 L58,90"/>
+
+  <!-- T21 text band -->
+  <path android:fillColor="#C9A84C"
+      android:pathData="M36,96 Q54,100 72,96 L72,100 Q54,104 36,100 Z"/>
+
+</vector>
