@@ -4,48 +4,82 @@
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
-
-  <!-- Gold ring -->
-  <path android:fillColor="#C9A84C"
-      android:pathData="M54,8 A46,46 0 1,1 53.9,8 Z
-                        M54,12 A42,42 0 1,0 54.1,12 Z"/>
-
-  <!-- Eagle body -->
-  <ellipse android:fillColor="#C9A84C"
-      android:cx="54" android:cy="62" android:rx="10" android:ry="14"/>
-
-  <!-- Eagle head -->
-  <circle android:fillColor="#C9A84C"
-      android:cx="54" android:cy="38" android:r="10"/>
-
-  <!-- Beak -->
-  <path android:fillColor="#112040"
-      android:pathData="M61,36 L68,40 L61,44 Z"/>
-
-  <!-- Eye -->
-  <circle android:fillColor="#112040"
-      android:cx="58" android:cy="35" android:r="2"/>
-
-  <!-- Left wing -->
-  <path android:fillColor="#C9A84C" android:fillAlpha="0.92"
-      android:pathData="M49,56 Q28,46 16,54 Q30,60 44,66 Z"/>
-
-  <!-- Right wing -->
-  <path android:fillColor="#C9A84C" android:fillAlpha="0.92"
-      android:pathData="M59,56 Q80,46 92,54 Q78,60 64,66 Z"/>
-
-  <!-- Tail feathers left -->
-  <path android:strokeColor="#C9A84C" android:strokeWidth="2"
-      android:strokeLineCap="round" android:fillColor="#00000000"
-      android:pathData="M46,76 L36,88 M50,76 L42,90 M54,76 L50,90"/>
-
-  <!-- Tail feathers right -->
-  <path android:strokeColor="#C9A84C" android:strokeWidth="2"
-      android:strokeLineCap="round" android:fillColor="#00000000"
-      android:pathData="M62,76 L72,88 M58,76 L66,90 M54,76 L58,90"/>
-
-  <!-- T21 text band -->
-  <path android:fillColor="#C9A84C"
-      android:pathData="M36,96 Q54,100 72,96 L72,100 Q54,104 36,100 Z"/>
-
+ 
+    <!-- Gold outer ring (path approximation of circle stroke) -->
+    <path
+        android:fillColor="#C9A84C"
+        android:pathData="M54,10 A44,44 0 1,1 53.9,10 Z M54,14 A40,40 0 1,0 54.1,14 Z"/>
+ 
+    <!-- Eagle body (ellipse as path) -->
+    <path
+        android:fillColor="#C9A84C"
+        android:pathData="M54,38 C60,38 64,44 64,52 C64,60 60,66 54,66 C48,66 44,60 44,52 C44,44 48,38 54,38 Z"/>
+ 
+    <!-- Eagle head (circle as path) -->
+    <path
+        android:fillColor="#C9A84C"
+        android:pathData="M54,22 C59.5,22 64,26.5 64,32 C64,37.5 59.5,42 54,42 C48.5,42 44,37.5 44,32 C44,26.5 48.5,22 54,22 Z"/>
+ 
+    <!-- Beak -->
+    <path
+        android:fillColor="#112040"
+        android:pathData="M61,30 L68,33 L61,36 Z"/>
+ 
+    <!-- Eye (small circle as path) -->
+    <path
+        android:fillColor="#112040"
+        android:pathData="M58,29 C59.1,29 60,29.9 60,31 C60,32.1 59.1,33 58,33 C56.9,33 56,32.1 56,31 C56,29.9 56.9,29 58,29 Z"/>
+ 
+    <!-- Left wing -->
+    <path
+        android:fillColor="#C9A84C"
+        android:fillAlpha="0.92"
+        android:pathData="M49,54 Q28,44 16,52 Q30,58 44,64 Z"/>
+ 
+    <!-- Right wing -->
+    <path
+        android:fillColor="#C9A84C"
+        android:fillAlpha="0.92"
+        android:pathData="M59,54 Q80,44 92,52 Q78,58 64,64 Z"/>
+ 
+    <!-- Tail feathers left -->
+    <path
+        android:strokeColor="#C9A84C"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M46,74 L36,86"/>
+    <path
+        android:strokeColor="#C9A84C"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M50,74 L42,88"/>
+    <path
+        android:strokeColor="#C9A84C"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M54,74 L50,88"/>
+ 
+    <!-- Tail feathers right -->
+    <path
+        android:strokeColor="#C9A84C"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M62,74 L72,86"/>
+    <path
+        android:strokeColor="#C9A84C"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M58,74 L66,88"/>
+    <path
+        android:strokeColor="#C9A84C"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M54,74 L58,88"/>
+ 
 </vector>
